@@ -4,7 +4,10 @@ import List from "../ListPanel/List";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
 
+// The Panel component is the main component of the application.
+// It manages the state of the tasks and handles the logic for adding, editing, viewing, deleting, and completing tasks.
 function Panel() {
+  // State variables are declared for the tasks, the new task input, the editing mode, the current task being edited, the task being viewed, the visibility of the modal, and the completion status of tasks.
   const [todoData, setTodoData] = useState([]);
   const [newTodoData, setNewTodoData] = useState("");
   const [isEditing, setIsEditing] = useState(false);
@@ -13,6 +16,7 @@ function Panel() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false); 
 
+  // The handleClick function handles adding and updating tasks.
   function handleClick() {
     if (newTodoData !== "" && !isEditing) {
       const newData = { d: newTodoData, completed: false }; 
@@ -29,29 +33,35 @@ function Panel() {
     }
   }
 
+  // The handleView function handles viewing tasks.
   function handleView(index) {
     setViewedTask(todoData[index].d);
     setIsModalVisible(true);
   }
 
+  // The handleEdit function handles editing tasks.
   function handleEdit(index) {
     setIsEditing(true);
     setCurrentTask(index);
     setNewTodoData(todoData[index].d);
   }
 
+  // The handleDelete function handles deleting tasks.
   function handleDelete(index) {
     setTodoData((prevData) => prevData.filter((_, i) => i !== index));
   }
 
+  // The handleCloseModal function handles closing the modal.
   function handleCloseModal() {
     setIsModalVisible(false);
   }
 
+  // The completeTask function handles completing tasks.
   const completeTask = (index) => { 
     setTodoData(prevData => prevData.map((item, i) => i === index ? {...item, completed: !item.completed} : item));
   };
 
+  // The component returns a div with an input and a button for adding tasks, a list of tasks, and a modal for viewing tasks.
   return (
     <>
       <div className="panel">
@@ -81,4 +91,5 @@ function Panel() {
   );
 }
 
+// The Panel component is exported for use in other files.
 export default Panel;

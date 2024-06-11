@@ -1,0 +1,50 @@
+.panel{
+    width: 60%;
+    height: 60px;
+    border-top-left-radius: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #252930;
+    box-shadow: 0px 0px 5px rgba(243, 238, 238, 0.2);
+    margin-bottom: 10px;
+}
+.completed {
+    text-decoration: line-through;
+  }
+input{
+    width: 80%;
+    height: 35px;
+    margin-right: 5px;
+    border-top-left-radius: 10px;
+    color: #D1D7E0;
+}
+
+button{
+    width: 80px;
+    height: 42px;
+    border-top-right-radius: 10px;
+    color: #D1D7E0;
+}
+.dataCont{
+    width: 60%;
+    height: 340px;
+    border-bottom-right-radius: 15px;
+    padding: 5px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: #252930;
+    box-shadow: 0px 0px 5px rgba(243, 238, 238, 0.2);
+}
+#emptyTask{
+    width: 200px;
+    background-color: #252930;
+    color: #D1D7E0;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 5px rgba(243, 238, 238, 0.2);
+}

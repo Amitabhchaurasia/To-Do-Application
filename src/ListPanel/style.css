@@ -1,0 +1,26 @@
+h4 {
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+    padding-bottom: 10px;
+    text-align: start;
+    margin-bottom: 5px;
+    color: #D1D7E0;
+    border-bottom: 1px solid #D1D7E0;
+    
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+}
+.list button{
+    background-color: #D1D7E0;
+    color: #2C3E50;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    margin-bottom: 5px;
+}

@@ -23,7 +23,7 @@ This Todo Application is a simple and user-friendly tool to manage your daily ta
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/todo-application.git
+    git clone https://github.com/Amitabhchaurasia/To-Do-Application.git
     cd todo-application
     ```
 
